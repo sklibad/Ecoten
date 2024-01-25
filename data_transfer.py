@@ -67,7 +67,7 @@ def upload_rasters():
         os.remove(full_path)
         os.remove(temp_file_trans)
 
-os.environ["PGPASSWORD"] = "ecotenistheway"
+os.environ["PGPASSWORD"] = "rds-server-password"
 bucket = access_s3_bucket('your-access-key-id', 'your-secret-access-key')
 files = retrieve_wanted_data(["Prague"])
 download_files(bucket, files)
